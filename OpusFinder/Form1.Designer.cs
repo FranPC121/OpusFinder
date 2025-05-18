@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            cv1 = new Button();
+            SuspendLayout();
+            // 
+            // cv1
+            // 
+            cv1.BackgroundImageLayout = ImageLayout.Zoom;
+            cv1.Location = new Point(736, 12);
+            cv1.Name = "cv1";
+            cv1.Size = new Size(96, 28);
+            cv1.TabIndex = 0;
+            cv1.Text = "Crear CV";
+            cv1.UseVisualStyleBackColor = true;
+            cv1.Click += cv1_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(844, 528);
+            Controls.Add(cv1);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button cv1;
     }
 }
