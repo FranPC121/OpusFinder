@@ -56,7 +56,7 @@
             logo.SizeMode = PictureBoxSizeMode.Zoom;
             logo.TabIndex = 1;
             logo.TabStop = false;
-            logo.Click += logo_Click;
+            
             // 
             // pictureBox1
             // 
