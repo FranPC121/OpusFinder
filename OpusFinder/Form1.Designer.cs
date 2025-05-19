@@ -647,6 +647,7 @@
             // 
             pictureBox4.Anchor = AnchorStyles.Top;
             pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = Properties.Resources.comprobado;
             pictureBox4.Location = new Point(611, 187);
             pictureBox4.Name = "pictureBox4";
