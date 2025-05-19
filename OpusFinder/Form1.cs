@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace OpusFinder
 {
     public partial class Form1 : Form
@@ -9,9 +11,13 @@ namespace OpusFinder
 
         private void cv1_Click(object sender, EventArgs e)
         {
-            cv nuevoFormulario = new cv();
-            nuevoFormulario.Show();     // Muestra el form para crear cv
-            this.Hide();
+            this.Hide(); // Oculta Form1
+
+           cv cvForm = new cv();
+
+            cvForm.FormClosed += (s, args) => this.Show(); // Mostrar Form1 cuando cv se cierra
+
+            cvForm.Show(); // Mostrar el formulario cv
         }
     }
 }
