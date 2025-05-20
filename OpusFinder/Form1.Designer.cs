@@ -39,28 +39,41 @@
             región = new ComboBox();
             panel1 = new Panel();
             panel3 = new Panel();
-            pictureBox9 = new PictureBox();
-            label19 = new Label();
-            pictureBox11 = new PictureBox();
-            label14 = new Label();
-            pictureBox13 = new PictureBox();
-            button3 = new Button();
             pictureBox7 = new PictureBox();
             label9 = new Label();
+            pictureBox9 = new PictureBox();
             label10 = new Label();
+            pictureBox11 = new PictureBox();
+            button3 = new Button();
+            pictureBox13 = new PictureBox();
             label11 = new Label();
             label12 = new Label();
+            label14 = new Label();
+            label19 = new Label();
             panel2 = new Panel();
-            pictureBox8 = new PictureBox();
-            label18 = new Label();
-            pictureBox12 = new PictureBox();
-            pictureBox16 = new PictureBox();
-            button2 = new Button();
             pictureBox6 = new PictureBox();
             label5 = new Label();
+            pictureBox8 = new PictureBox();
             label6 = new Label();
+            pictureBox12 = new PictureBox();
+            button2 = new Button();
+            pictureBox16 = new PictureBox();
             label7 = new Label();
             label8 = new Label();
+            label18 = new Label();
+            label24 = new Label();
+            panel4 = new Panel();
+            label25 = new Label();
+            pictureBox15 = new PictureBox();
+            label13 = new Label();
+            pictureBox17 = new PictureBox();
+            pictureBox19 = new PictureBox();
+            button4 = new Button();
+            pictureBox23 = new PictureBox();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
             empleo2 = new Panel();
             pictureBox18 = new PictureBox();
             pictureBox14 = new PictureBox();
@@ -92,15 +105,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
             empleo2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
@@ -234,6 +252,7 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(empleo2);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(descripcion);
@@ -246,266 +265,403 @@
             panel1.Controls.Add(lblregion);
             panel1.Location = new Point(0, 134);
             panel1.Name = "panel1";
-            panel1.Size = new Size(846, 628);
+            panel1.Size = new Size(846, 890);
             panel1.TabIndex = 26;
             panel1.Paint += panel1_Paint;
             // 
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top;
-            panel3.Controls.Add(pictureBox9);
-            panel3.Controls.Add(label19);
-            panel3.Controls.Add(pictureBox11);
-            panel3.Controls.Add(label14);
-            panel3.Controls.Add(pictureBox13);
-            panel3.Controls.Add(button3);
             panel3.Controls.Add(pictureBox7);
             panel3.Controls.Add(label9);
+            panel3.Controls.Add(pictureBox9);
             panel3.Controls.Add(label10);
+            panel3.Controls.Add(pictureBox11);
+            panel3.Controls.Add(button3);
+            panel3.Controls.Add(pictureBox13);
             panel3.Controls.Add(label11);
             panel3.Controls.Add(label12);
+            panel3.Controls.Add(label14);
+            panel3.Controls.Add(label19);
             panel3.Font = new Font("Century Gothic", 9F);
             panel3.Location = new Point(435, 439);
             panel3.Name = "panel3";
-            panel3.Size = new Size(408, 160);
-            panel3.TabIndex = 28;
-            panel3.Paint += panel3_Paint;
+            panel3.Size = new Size(408, 126);
+            panel3.TabIndex = 34;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.ul;
+            pictureBox7.Location = new Point(20, 100);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(22, 20);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 32;
+            pictureBox7.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 10F);
+            label9.Location = new Point(45, 72);
+            label9.Name = "label9";
+            label9.Size = new Size(129, 19);
+            label9.TabIndex = 7;
+            label9.Text = "Tiempo completo";
             // 
             // pictureBox9
             // 
-            pictureBox9.Image = Properties.Resources.ul;
-            pictureBox9.Location = new Point(28, 129);
+            pictureBox9.Image = Properties.Resources.el;
+            pictureBox9.Location = new Point(16, 42);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(22, 20);
+            pictureBox9.Size = new Size(32, 24);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 38;
+            pictureBox9.TabIndex = 31;
             pictureBox9.TabStop = false;
             // 
-            // label19
+            // label10
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Century Gothic", 10F);
-            label19.Location = new Point(56, 101);
-            label19.Name = "label19";
-            label19.Size = new Size(129, 19);
-            label19.TabIndex = 9;
-            label19.Text = "Tiempo completo";
+            label10.AutoSize = true;
+            label10.Font = new Font("Century Gothic", 10F);
+            label10.Location = new Point(94, 44);
+            label10.Name = "label10";
+            label10.Size = new Size(0, 19);
+            label10.TabIndex = 6;
             // 
             // pictureBox11
             // 
-            pictureBox11.Image = Properties.Resources.el;
-            pictureBox11.Location = new Point(24, 71);
+            pictureBox11.Image = Properties.Resources.rl;
+            pictureBox11.Location = new Point(20, 72);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(32, 24);
+            pictureBox11.Size = new Size(22, 20);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 37;
+            pictureBox11.TabIndex = 30;
             pictureBox11.TabStop = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(15, 39);
-            label14.Name = "label14";
-            label14.Size = new Size(222, 25);
-            label14.TabIndex = 6;
-            label14.Text = "Telecomunicaciones";
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = Properties.Resources.rl;
-            pictureBox13.Location = new Point(28, 101);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(22, 20);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 36;
-            pictureBox13.TabStop = false;
             // 
             // button3
             // 
             button3.BackColor = Color.AliceBlue;
             button3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Navy;
-            button3.Location = new Point(297, 121);
+            button3.Location = new Point(295, 87);
             button3.Name = "button3";
-            button3.Size = new Size(103, 29);
+            button3.Size = new Size(103, 30);
             button3.TabIndex = 5;
             button3.Text = "Ver oferta";
             button3.UseVisualStyleBackColor = false;
             // 
-            // pictureBox7
+            // pictureBox13
             // 
-            pictureBox7.Image = Properties.Resources.il;
-            pictureBox7.Location = new Point(352, 3);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(48, 41);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 4;
-            pictureBox7.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.Location = new Point(285, 21);
-            label9.Name = "label9";
-            label9.Size = new Size(61, 12);
-            label9.TabIndex = 3;
-            label9.Text = "Informática";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(56, 128);
-            label10.Name = "label10";
-            label10.Size = new Size(163, 16);
-            label10.TabIndex = 2;
-            label10.Text = "San Salvador, San Salvador";
+            pictureBox13.Image = Properties.Resources.cl2;
+            pictureBox13.Location = new Point(350, 3);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(48, 41);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 4;
+            pictureBox13.TabStop = false;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Century Gothic", 10F);
-            label11.Location = new Point(56, 76);
+            label11.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.Location = new Point(295, 21);
             label11.Name = "label11";
-            label11.Size = new Size(210, 19);
-            label11.TabIndex = 1;
-            label11.Text = "Urbania Development Group";
+            label11.Size = new Size(54, 12);
+            label11.TabIndex = 3;
+            label11.Text = "Educación ";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(15, 11);
+            label12.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label12.Location = new Point(45, 101);
             label12.Name = "label12";
-            label12.Size = new Size(129, 25);
-            label12.TabIndex = 0;
-            label12.Text = "Tecnico en ";
-            label12.Click += label12_Click;
+            label12.Size = new Size(158, 16);
+            label12.TabIndex = 2;
+            label12.Text = "San Vicente, San Vicente ";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Century Gothic", 10F);
+            label14.Location = new Point(45, 44);
+            label14.Name = "label14";
+            label14.Size = new Size(129, 19);
+            label14.TabIndex = 1;
+            label14.Text = "Latin Job Options";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Location = new Point(15, 11);
+            label19.Name = "label19";
+            label19.Size = new Size(89, 25);
+            label19.TabIndex = 0;
+            label19.Text = "Mentor ";
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top;
-            panel2.Controls.Add(pictureBox8);
-            panel2.Controls.Add(label18);
-            panel2.Controls.Add(pictureBox12);
-            panel2.Controls.Add(pictureBox16);
-            panel2.Controls.Add(button2);
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(label5);
+            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(label6);
+            panel2.Controls.Add(pictureBox12);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(pictureBox16);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label8);
+            panel2.Controls.Add(label18);
+            panel2.Controls.Add(label24);
             panel2.Font = new Font("Century Gothic", 9F);
             panel2.Location = new Point(12, 439);
             panel2.Name = "panel2";
-            panel2.Size = new Size(408, 160);
-            panel2.TabIndex = 27;
-            panel2.Paint += panel2_Paint;
+            panel2.Size = new Size(408, 126);
+            panel2.TabIndex = 33;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.ul;
+            pictureBox6.Location = new Point(20, 100);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(22, 20);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 32;
+            pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 10F);
+            label5.Location = new Point(45, 72);
+            label5.Name = "label5";
+            label5.Size = new Size(129, 19);
+            label5.TabIndex = 7;
+            label5.Text = "Tiempo completo";
             // 
             // pictureBox8
             // 
-            pictureBox8.Image = Properties.Resources.ul;
-            pictureBox8.Location = new Point(20, 129);
+            pictureBox8.Image = Properties.Resources.el;
+            pictureBox8.Location = new Point(16, 42);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(22, 20);
+            pictureBox8.Size = new Size(32, 24);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 35;
+            pictureBox8.TabIndex = 31;
             pictureBox8.TabStop = false;
             // 
-            // label18
+            // label6
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Century Gothic", 10F);
-            label18.Location = new Point(45, 101);
-            label18.Name = "label18";
-            label18.Size = new Size(129, 19);
-            label18.TabIndex = 8;
-            label18.Text = "Tiempo completo";
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 10F);
+            label6.Location = new Point(94, 44);
+            label6.Name = "label6";
+            label6.Size = new Size(0, 19);
+            label6.TabIndex = 6;
             // 
             // pictureBox12
             // 
-            pictureBox12.Image = Properties.Resources.el;
-            pictureBox12.Location = new Point(16, 71);
+            pictureBox12.Image = Properties.Resources.rl;
+            pictureBox12.Location = new Point(20, 72);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(32, 24);
+            pictureBox12.Size = new Size(22, 20);
             pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 34;
+            pictureBox12.TabIndex = 30;
             pictureBox12.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            pictureBox16.Image = Properties.Resources.rl;
-            pictureBox16.Location = new Point(20, 101);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(22, 20);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 33;
-            pictureBox16.TabStop = false;
             // 
             // button2
             // 
             button2.BackColor = Color.AliceBlue;
             button2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Navy;
-            button2.Location = new Point(295, 121);
+            button2.Location = new Point(295, 87);
             button2.Name = "button2";
             button2.Size = new Size(103, 30);
             button2.TabIndex = 5;
             button2.Text = "Ver oferta";
             button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox6
+            // pictureBox16
             // 
-            pictureBox6.Image = Properties.Resources.cl2;
-            pictureBox6.Location = new Point(350, 3);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(48, 41);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 4;
-            pictureBox6.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(295, 21);
-            label5.Name = "label5";
-            label5.Size = new Size(52, 12);
-            label5.TabIndex = 3;
-            label5.Text = "Comercio";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(45, 128);
-            label6.Name = "label6";
-            label6.Size = new Size(156, 16);
-            label6.TabIndex = 2;
-            label6.Text = "San Marcos, San Salvador";
+            pictureBox16.Image = Properties.Resources.cl2;
+            pictureBox16.Location = new Point(350, 3);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(48, 41);
+            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox16.TabIndex = 4;
+            pictureBox16.TabStop = false;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 10F);
-            label7.Location = new Point(45, 76);
+            label7.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.Location = new Point(295, 21);
             label7.Name = "label7";
-            label7.Size = new Size(105, 19);
-            label7.TabIndex = 1;
-            label7.Text = "CABLE COLOR";
+            label7.Size = new Size(47, 12);
+            label7.TabIndex = 3;
+            label7.Text = "Industrial";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(15, 11);
+            label8.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(45, 101);
             label8.Name = "label8";
-            label8.Size = new Size(212, 25);
-            label8.TabIndex = 0;
-            label8.Text = "Ejecutivo de Ventas";
-            label8.Click += label8_Click;
+            label8.Size = new Size(193, 16);
+            label8.TabIndex = 2;
+            label8.Text = "Antiguo Cuscatlán, La Libertad ";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Century Gothic", 10F);
+            label18.Location = new Point(45, 44);
+            label18.Name = "label18";
+            label18.Size = new Size(241, 19);
+            label18.TabIndex = 1;
+            label18.Text = "CMI Corporación Multi Inversiones";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label24.Location = new Point(15, 11);
+            label24.Name = "label24";
+            label24.Size = new Size(219, 25);
+            label24.TabIndex = 0;
+            label24.Text = "Mecánico Industrial ";
+            // 
+            // panel4
+            // 
+            panel4.Anchor = AnchorStyles.Top;
+            panel4.Controls.Add(label25);
+            panel4.Controls.Add(pictureBox15);
+            panel4.Controls.Add(label13);
+            panel4.Controls.Add(pictureBox17);
+            panel4.Controls.Add(pictureBox19);
+            panel4.Controls.Add(button4);
+            panel4.Controls.Add(pictureBox23);
+            panel4.Controls.Add(label20);
+            panel4.Controls.Add(label21);
+            panel4.Controls.Add(label22);
+            panel4.Controls.Add(label23);
+            panel4.Font = new Font("Century Gothic", 9F);
+            panel4.Location = new Point(12, 585);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(408, 160);
+            panel4.TabIndex = 36;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label25.Location = new Point(15, 36);
+            label25.Name = "label25";
+            label25.Size = new Size(185, 25);
+            label25.TabIndex = 36;
+            label25.Text = "de Construcción ";
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = Properties.Resources.ul;
+            pictureBox15.Location = new Point(20, 129);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(22, 20);
+            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox15.TabIndex = 35;
+            pictureBox15.TabStop = false;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Century Gothic", 10F);
+            label13.Location = new Point(45, 101);
+            label13.Name = "label13";
+            label13.Size = new Size(129, 19);
+            label13.TabIndex = 8;
+            label13.Text = "Tiempo completo";
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.Image = Properties.Resources.el;
+            pictureBox17.Location = new Point(16, 71);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(32, 24);
+            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox17.TabIndex = 34;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.Image = Properties.Resources.rl;
+            pictureBox19.Location = new Point(20, 101);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(22, 20);
+            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox19.TabIndex = 33;
+            pictureBox19.TabStop = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.AliceBlue;
+            button4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Navy;
+            button4.Location = new Point(295, 121);
+            button4.Name = "button4";
+            button4.Size = new Size(103, 30);
+            button4.TabIndex = 5;
+            button4.Text = "Ver oferta";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox23
+            // 
+            pictureBox23.Image = Properties.Resources.cl2;
+            pictureBox23.Location = new Point(350, 3);
+            pictureBox23.Name = "pictureBox23";
+            pictureBox23.Size = new Size(48, 41);
+            pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox23.TabIndex = 4;
+            pictureBox23.TabStop = false;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label20.Location = new Point(295, 21);
+            label20.Name = "label20";
+            label20.Size = new Size(68, 12);
+            label20.TabIndex = 3;
+            label20.Text = "Construcción ";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label21.Location = new Point(45, 128);
+            label21.Name = "label21";
+            label21.Size = new Size(166, 16);
+            label21.TabIndex = 2;
+            label21.Text = "San Salvador, San Salvador ";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Century Gothic", 10F);
+            label22.Location = new Point(45, 76);
+            label22.Name = "label22";
+            label22.Size = new Size(120, 19);
+            label22.TabIndex = 1;
+            label22.Text = "Ingenia Talentos";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label23.Location = new Point(15, 11);
+            label23.Name = "label23";
+            label23.Size = new Size(229, 25);
+            label23.TabIndex = 0;
+            label23.Text = "Gerente de Proyecto ";
             // 
             // empleo2
             // 
@@ -795,7 +951,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(844, 790);
+            ClientSize = new Size(844, 1020);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -810,16 +966,22 @@
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
             empleo2.ResumeLayout(false);
             empleo2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
@@ -864,25 +1026,8 @@
         private Label label4;
         private Button off1;
         private PictureBox pictureBox3;
-        private Panel panel3;
-        private Button button3;
-        private PictureBox pictureBox7;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Panel panel2;
-        private Button button2;
-        private PictureBox pictureBox6;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label14;
         private Label label16;
         private Label label15;
-        private Label label19;
-        private Label label18;
         private Label label17;
         private PictureBox pictureBox14;
         private PictureBox pictureBox10;
@@ -890,11 +1035,41 @@
         private PictureBox pictureBox20;
         private PictureBox pictureBox21;
         private PictureBox pictureBox22;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox16;
+        private Panel panel4;
+        private PictureBox pictureBox15;
+        private Label label13;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox19;
+        private Button button4;
+        private PictureBox pictureBox23;
+        private Label label20;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private Panel panel3;
+        private PictureBox pictureBox7;
+        private Label label9;
         private PictureBox pictureBox9;
+        private Label label10;
         private PictureBox pictureBox11;
+        private Button button3;
         private PictureBox pictureBox13;
+        private Label label11;
+        private Label label12;
+        private Label label14;
+        private Label label19;
+        private Panel panel2;
+        private PictureBox pictureBox6;
+        private Label label5;
+        private PictureBox pictureBox8;
+        private Label label6;
+        private PictureBox pictureBox12;
+        private Button button2;
+        private PictureBox pictureBox16;
+        private Label label7;
+        private Label label8;
+        private Label label18;
+        private Label label24;
+        private Label label25;
     }
 }
