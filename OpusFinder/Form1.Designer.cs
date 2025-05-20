@@ -507,9 +507,9 @@
             label8.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label8.Location = new Point(45, 101);
             label8.Name = "label8";
-            label8.Size = new Size(193, 16);
+            label8.Size = new Size(77, 16);
             label8.TabIndex = 2;
-            label8.Text = "Antiguo Cuscatlán, La Libertad ";
+            label8.Text = "La Libertad ";
             // 
             // label18
             // 
@@ -546,7 +546,7 @@
             panel4.Controls.Add(label22);
             panel4.Controls.Add(label23);
             panel4.Font = new Font("Century Gothic", 9F);
-            panel4.Location = new Point(12, 585);
+            panel4.Location = new Point(186, 592);
             panel4.Name = "panel4";
             panel4.Size = new Size(408, 160);
             panel4.TabIndex = 36;
@@ -894,6 +894,7 @@
             off1.TabIndex = 5;
             off1.Text = "Ver oferta";
             off1.UseVisualStyleBackColor = false;
+            off1.Click += off1_Click;
             // 
             // pictureBox3
             // 
