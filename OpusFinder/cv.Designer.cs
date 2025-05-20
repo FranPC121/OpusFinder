@@ -274,6 +274,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(435, 23);
             txtTitulo.TabIndex = 29;
+            txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // txtCorreo
             // 

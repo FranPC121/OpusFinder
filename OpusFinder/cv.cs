@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using System.Windows.Forms;
 
 
+
 namespace OpusFinder
 {
     public partial class cv : Form
@@ -90,14 +91,19 @@ namespace OpusFinder
 
         }
 
-        
-        
+
+
 
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             
         }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    
+
 }
