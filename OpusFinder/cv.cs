@@ -29,7 +29,7 @@ namespace OpusFinder
             {
                 // Cargar la imagen seleccionada en el PictureBox
                 pictureBoxFoto.Image = System.Drawing.Image.FromFile(archivo.FileName);
-                pictureBoxFoto.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el tamaño de la imagen al PictureBox
+               
             }
         }
 
