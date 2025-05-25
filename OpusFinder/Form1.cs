@@ -131,7 +131,11 @@ namespace OpusFinder
 
         }
 
+
+        private void off1_Click(object sender, EventArgs e)
+
         private void pictureBox4_Click(object sender, EventArgs e)
+
         {
 
         }
