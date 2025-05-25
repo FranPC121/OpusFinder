@@ -24,44 +24,6 @@ namespace OpusFinder
             panel1.Size = new Size(this.ClientSize.Width, this.ClientSize.Height - 150);
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         }
-
-        
-
-        
-
-        
-
-        
-
-       
-
-        
-
-
-
-        
-
-       
-
-        
-
-
-
-        
-
-        
-
-       
-
-        
-
-        
-
-        
-
-
-        
-
         
     }
 }

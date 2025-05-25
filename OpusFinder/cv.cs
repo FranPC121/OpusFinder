@@ -20,13 +20,7 @@ namespace OpusFinder
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.FormClosed += (s, args) => Application.Exit(); // Cierra todo al cerrar Form1
-            form1.Show();
-            this.Close();
-        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -97,12 +91,27 @@ namespace OpusFinder
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtTitulo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            us nuevoFormulario = new us();
+            nuevoFormulario.Show();     // Muestra el form para crear cv
+            this.Hide();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.FormClosed += (s, args) => Application.Exit(); // Cierra todo al cerrar Form1
+            form1.Show();
+            this.Close();
         }
     }
 
