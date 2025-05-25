@@ -80,7 +80,7 @@
             label2.Size = new Size(73, 21);
             label2.TabIndex = 3;
             label2.Text = "Nombre";
-            label2.Click += label2_Click;
+            
             // 
             // label3
             // 
@@ -114,7 +114,7 @@
             label5.Size = new Size(45, 21);
             label5.TabIndex = 7;
             label5.Text = "Foto";
-            label5.Click += label5_Click;
+            
             // 
             // pictureBoxFoto
             // 
@@ -205,7 +205,7 @@
             label12.Size = new Size(69, 21);
             label12.TabIndex = 21;
             label12.Text = "Género";
-            label12.Click += label12_Click;
+            
             // 
             // label13
             // 
@@ -229,7 +229,7 @@
             cmbEstadoCivil.Name = "cmbEstadoCivil";
             cmbEstadoCivil.Size = new Size(291, 23);
             cmbEstadoCivil.TabIndex = 25;
-            cmbEstadoCivil.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            
             // 
             // cmbGenero
             // 
@@ -241,7 +241,7 @@
             cmbGenero.Name = "cmbGenero";
             cmbGenero.Size = new Size(295, 23);
             cmbGenero.TabIndex = 26;
-            cmbGenero.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+           
             // 
             // txtNombre
             // 
@@ -250,7 +250,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(203, 23);
             txtNombre.TabIndex = 27;
-            txtNombre.TextChanged += textBox1_TextChanged;
+          
             // 
             // txtApellidos
             // 
@@ -267,7 +267,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(435, 23);
             txtTitulo.TabIndex = 29;
-            txtTitulo.TextChanged += txtTitulo_TextChanged;
+           
             // 
             // txtCorreo
             // 
@@ -318,7 +318,7 @@
             button2.TabIndex = 35;
             button2.Text = "Exportar PDF";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            
             // 
             // label14
             // 
@@ -493,7 +493,7 @@
             Controls.Add(label2);
             Name = "cv";
             Text = "cv";
-            Load += cv_Load;
+            
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
