@@ -29,11 +29,11 @@ namespace OpusFinder
             {
                 // Cargar la imagen seleccionada en el PictureBox
                 pictureBoxFoto.Image = System.Drawing.Image.FromFile(archivo.FileName);
-               
+
             }
         }
 
-        
+
         private void button3_Click_1(object sender, EventArgs e)
         {
             us nuevoFormulario = new us();
@@ -47,6 +47,13 @@ namespace OpusFinder
             form1.FormClosed += (s, args) => Application.Exit(); // Cierra todo al cerrar Form1
             form1.Show();
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            us nuevoFormulario = new us();
+            nuevoFormulario.Show();     // Muestra el form para crear cv
+            this.Hide();
         }
     }
 

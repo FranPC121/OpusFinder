@@ -29,20 +29,41 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Left;
             pictureBox1.Image = Properties.Resources.back1;
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(48, 29);
+            pictureBox1.Size = new Size(70, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(148, 133);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(475, 185);
+            dataGridView1.TabIndex = 3;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button4.Location = new Point(334, 324);
+            button4.Name = "button4";
+            button4.Size = new Size(104, 23);
+            button4.TabIndex = 51;
+            button4.Text = "Borrar Usuarios";
+            button4.UseVisualStyleBackColor = true;
             // 
             // us
             // 
@@ -50,15 +71,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Cursor = Cursors.Hand;
             Name = "us";
             Text = "us";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
+        private Button button4;
     }
 }
