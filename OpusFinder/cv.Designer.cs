@@ -311,6 +311,7 @@
             button2.TabIndex = 35;
             button2.Text = "Exportar PDF";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label14
             // 

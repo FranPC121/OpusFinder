@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 
 
@@ -54,6 +55,27 @@ namespace OpusFinder
             us nuevoFormulario = new us();
             nuevoFormulario.Show();     // Muestra el form para crear cv
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //objeto par conexión de cadena
+            SqlConnection con = new SqlConnection("Data Source=FRAN;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=True");
+            con.Open();
+            //variables para cadena de inserción
+            String nombre = txtnombre.Text;
+            String Descripcion = txtDesc.Text;
+            int cantidad = int.Parse(txtCant.Text);
+            //inserción a SQL
+            String cadena = "insert into productos (nombre, descripcion, cantidad) values('" + nombre + "','" + Descripcion + "','" + cantidad + "')";
+            SqlCommand comando = new SqlCommand(cadena, con);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Datos insertados");
+            //Limpieza de elementos
+            txtnombre.Text = "";
+            txtDesc.Text = "";
+            txtCant.Text = "";
+            con.Close();
         }
     }
 
