@@ -245,6 +245,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(203, 23);
             txtNombre.TabIndex = 27;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtApellidos
             // 

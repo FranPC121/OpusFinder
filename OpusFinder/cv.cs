@@ -1,14 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 
@@ -59,8 +63,59 @@ namespace OpusFinder
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            
+            SqlConnection con = new SqlConnection("Data Source = FRAN; Initial Catalog = CV; User ID = sa; Password = Nosenada01; Encrypt = False");
+            con.Open();
+
+            string Nombres = txtNombre.Text;
+            string Apellidos = txtApellidos.Text;
+            string Titulo_universitario = txtTitulo.Text;
+            string Email = txtCorreo.Text;
+            string Codigo_Postal = txtCP.Text;
+            string Localidad = txtLocalidad.Text;
+            string Genero = cmbGenero.Text;
+            string Estado_civil = cmbEstadoCivil.Text;
+            string Telefono = txtTelefono.Text;         // Asegúrate de tener este TextBox
+            string Direccion = txtDireccion.Text;       // Asegúrate de tener este TextBox
+
+            string cadena = "INSERT INTO dbo.usuario (Nombres, Apellidos, Titulo_universitario, Email, Código_Postal, Localidad, Género, Estado_civil, Telefono, Direccion) " +
+                            "VALUES (@Nombres, @Apellidos, @Titulo_universitario, @Email, @Codigo_Postal, @Localidad, @Genero, @Estado_civil, @Telefono, @Direccion)";
+
+            SqlCommand comando = new SqlCommand(cadena, con);
+            comando.Parameters.AddWithValue("@Nombres", Nombres);
+            comando.Parameters.AddWithValue("@Apellidos", Apellidos);
+            comando.Parameters.AddWithValue("@Titulo_universitario", Titulo_universitario);
+            comando.Parameters.AddWithValue("@Email", Email);
+            comando.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
+            comando.Parameters.AddWithValue("@Localidad", Localidad);
+            comando.Parameters.AddWithValue("@Genero", Genero);
+            comando.Parameters.AddWithValue("@Estado_civil", Estado_civil);
+            comando.Parameters.AddWithValue("@Telefono", Telefono);
+            comando.Parameters.AddWithValue("@Direccion", Direccion);
+
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Datos guardados correctamente");
+
+            // Limpiar campos
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            txtTitulo.Text = "";
+            txtCorreo.Text = "";
+            txtCP.Text = "";
+            txtLocalidad.Text = "";
+            cmbGenero.Text = "";
+            cmbEstadoCivil.Text = "";
+            txtTelefono.Text = "";
+            txtDireccion.Text = "";
+
+            con.Close();
+        }
+
+
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
+
 }
