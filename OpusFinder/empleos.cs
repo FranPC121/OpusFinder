@@ -18,6 +18,10 @@ namespace OpusFinder
 {
 }
 
+namespace OpusFinder
+{
+}
+
 namespace OpusFinder.empleosTableAdapters {
     
     
