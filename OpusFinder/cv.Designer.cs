@@ -311,7 +311,7 @@
             button2.TabIndex = 35;
             button2.Text = "Exportar PDF";
             button2.UseVisualStyleBackColor = true;
-            
+            button2.Click += button2_Click;
             // 
             // label14
             // 
@@ -486,7 +486,6 @@
             Controls.Add(label2);
             Name = "cv";
             Text = "cv";
-            
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

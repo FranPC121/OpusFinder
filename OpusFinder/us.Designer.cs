@@ -59,7 +59,7 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button4.Location = new Point(334, 324);
+            button4.Location = new Point(341, 324);
             button4.Name = "button4";
             button4.Size = new Size(104, 23);
             button4.TabIndex = 51;

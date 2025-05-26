@@ -21,9 +21,8 @@ namespace OpusFinder
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.FormClosed += (s, args) => Application.Exit(); // Cierra todo al cerrar Form1
-            form1.Show();
+            cv cv = new cv();
+            cv.Show();
             this.Close();
         }
     }

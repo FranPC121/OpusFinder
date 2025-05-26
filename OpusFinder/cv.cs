@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 
 
 
+
+
 namespace OpusFinder
 {
     public partial class cv : Form
@@ -55,8 +57,10 @@ namespace OpusFinder
             this.Hide();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
             
-
-}
+            
+        }
     }
+}
