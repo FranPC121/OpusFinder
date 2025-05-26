@@ -65,6 +65,7 @@
             button4.TabIndex = 51;
             button4.Text = "Borrar Usuarios";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // us
             // 
