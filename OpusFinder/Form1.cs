@@ -137,7 +137,7 @@ namespace OpusFinder
             oferta nuevoFormulario = new oferta();
             nuevoFormulario.Show();     // Muestra el form para crear cv
             this.Hide();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0JDEK53;Initial Catalog=inventario;User ID=sa;Password=erazo;Encrypt=False");
+            
         }
     }
 }

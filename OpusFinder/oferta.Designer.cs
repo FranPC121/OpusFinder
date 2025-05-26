@@ -29,57 +29,59 @@
         private void InitializeComponent()
         {
             empleogrid = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
+            título = new DataGridViewTextBoxColumn();
+            Empresa = new DataGridViewTextBoxColumn();
+            modalidad = new DataGridViewTextBoxColumn();
+            Región = new DataGridViewTextBoxColumn();
+            Descripción = new DataGridViewTextBoxColumn();
+            Requerimentos = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)empleogrid).BeginInit();
             SuspendLayout();
             // 
             // empleogrid
             // 
+            empleogrid.AllowUserToAddRows = false;
+            empleogrid.AllowUserToDeleteRows = false;
             empleogrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            empleogrid.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            empleogrid.Location = new Point(12, 21);
+            empleogrid.Columns.AddRange(new DataGridViewColumn[] { título, Empresa, modalidad, Región, Descripción, Requerimentos });
+            empleogrid.Location = new Point(12, 34);
             empleogrid.Name = "empleogrid";
-            empleogrid.Size = new Size(637, 203);
+            empleogrid.Size = new Size(637, 43);
             empleogrid.TabIndex = 0;
             empleogrid.CellContentClick += empleogrid_CellContentClick;
             // 
-            // Column1
+            // título
             // 
-            Column1.HeaderText = "título";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            título.HeaderText = "título";
+            título.Name = "título";
+            título.ReadOnly = true;
             // 
-            // Column2
+            // Empresa
             // 
-            Column2.HeaderText = "Empresa";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            Empresa.HeaderText = "Empresa";
+            Empresa.Name = "Empresa";
+            Empresa.ReadOnly = true;
             // 
-            // Column3
+            // modalidad
             // 
-            Column3.HeaderText = "Modalidad";
-            Column3.Name = "Column3";
+            modalidad.HeaderText = "Modalidad";
+            modalidad.Name = "modalidad";
             // 
-            // Column4
+            // Región
             // 
-            Column4.HeaderText = "modalidad";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            Región.HeaderText = "Región";
+            Región.Name = "Región";
+            Región.ReadOnly = true;
             // 
-            // Column5
+            // Descripción
             // 
-            Column5.HeaderText = "Descripción";
-            Column5.Name = "Column5";
+            Descripción.HeaderText = "Descripción";
+            Descripción.Name = "Descripción";
             // 
-            // Column6
+            // Requerimentos
             // 
-            Column6.HeaderText = "Requerimentos";
-            Column6.Name = "Column6";
+            Requerimentos.HeaderText = "Requerimentos";
+            Requerimentos.Name = "Requerimentos";
             // 
             // oferta
             // 
@@ -96,11 +98,11 @@
         #endregion
 
         private DataGridView empleogrid;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn título;
+        private DataGridViewTextBoxColumn Empresa;
+        private DataGridViewTextBoxColumn modalidad;
+        private DataGridViewTextBoxColumn Región;
+        private DataGridViewTextBoxColumn Descripción;
+        private DataGridViewTextBoxColumn Requerimentos;
     }
 }
