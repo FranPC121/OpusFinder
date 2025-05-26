@@ -486,6 +486,7 @@
             Controls.Add(label2);
             Name = "cv";
             Text = "cv";
+            
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
