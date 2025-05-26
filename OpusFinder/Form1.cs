@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+
 namespace OpusFinder
 {
     public partial class Form1 : Form
@@ -133,7 +134,10 @@ namespace OpusFinder
 
         private void off1_Click(object sender, EventArgs e)
         {
-
+            oferta nuevoFormulario = new oferta();
+            nuevoFormulario.Show();     // Muestra el form para crear cv
+            this.Hide();
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0JDEK53;Initial Catalog=inventario;User ID=sa;Password=erazo;Encrypt=False");
         }
     }
 }
