@@ -179,7 +179,6 @@
             lblrubro.Size = new Size(56, 21);
             lblrubro.TabIndex = 24;
             lblrubro.Text = "Rubro";
-            
             // 
             // lblmodalidad
             // 
@@ -192,7 +191,6 @@
             lblmodalidad.Size = new Size(96, 21);
             lblmodalidad.TabIndex = 23;
             lblmodalidad.Text = "Modalidad";
-            
             // 
             // lblregion
             // 
@@ -206,7 +204,6 @@
             lblregion.Size = new Size(64, 21);
             lblregion.TabIndex = 22;
             lblregion.Text = "Región";
-            
             // 
             // modalidad
             // 
@@ -627,7 +624,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label20.Location = new Point(295, 21);
+            label20.Location = new Point(277, 21);
             label20.Name = "label20";
             label20.Size = new Size(68, 12);
             label20.TabIndex = 3;
@@ -754,7 +751,6 @@
             label1.Size = new Size(61, 12);
             label1.TabIndex = 3;
             label1.Text = "Informática";
-            
             // 
             // label2
             // 
@@ -765,7 +761,6 @@
             label2.Size = new Size(163, 16);
             label2.TabIndex = 2;
             label2.Text = "San Salvador, San Salvador";
-            
             // 
             // label3
             // 
@@ -799,7 +794,6 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 28;
             pictureBox4.TabStop = false;
-            
             // 
             // descripcion
             // 
@@ -832,7 +826,6 @@
             empleo1.Name = "empleo1";
             empleo1.Size = new Size(408, 126);
             empleo1.TabIndex = 26;
-            
             // 
             // pictureBox20
             // 
@@ -853,7 +846,6 @@
             label16.Size = new Size(129, 19);
             label16.TabIndex = 7;
             label16.Text = "Tiempo completo";
-            
             // 
             // pictureBox21
             // 
@@ -895,7 +887,6 @@
             off1.TabIndex = 5;
             off1.Text = "Ver oferta";
             off1.UseVisualStyleBackColor = false;
-            
             // 
             // pictureBox3
             // 
@@ -926,7 +917,6 @@
             empleoubi.Size = new Size(163, 16);
             empleoubi.TabIndex = 2;
             empleoubi.Text = "San Salvador, San Salvador";
-            
             // 
             // empleodsc
             // 
@@ -960,7 +950,6 @@
             Controls.Add(logo);
             Name = "Form1";
             Text = "Form1";
-            
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
