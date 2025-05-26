@@ -30,10 +30,8 @@ namespace OpusFinder
             {
                 // Cargar la imagen seleccionada en el PictureBox
                 pictureBoxFoto.Image = System.Drawing.Image.FromFile(archivo.FileName);
-
             }
         }
-
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -78,5 +76,6 @@ namespace OpusFinder
             con.Close();
         }
     }
+            
 
 }
