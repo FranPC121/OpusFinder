@@ -202,21 +202,42 @@ namespace OpusFinder
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string eliminarIdiomas = "DELETE FROM dbo.idiomas WHERE id_usuario = @IdUsuario";
-            SqlCommand cmd1 = new SqlCommand(eliminarIdiomas, con);
-            cmd1.Parameters.AddWithValue("@IdUsuario", idUsuario);
+            {
+                if (idUsuario == 0)
+                {
+                    MessageBox.Show("Selecciona un usuario antes de intentar eliminarlo.");
+                    return;
+                }
 
-            string eliminarUsuario = "DELETE FROM dbo.usuario WHERE id_usuario = @IdUsuario";
-            SqlCommand cmd2 = new SqlCommand(eliminarUsuario, con);
-            cmd2.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                try
+                {
+                    con.Open();
 
-            con.Open();
-            cmd1.ExecuteNonQuery();
-            cmd2.ExecuteNonQuery();
-            con.Close();
+                    // Eliminar idiomas
+                    string eliminarIdiomas = "DELETE FROM dbo.idiomas WHERE id_usuario = @IdUsuario";
+                    SqlCommand cmd1 = new SqlCommand(eliminarIdiomas, con);
+                    cmd1.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd1.ExecuteNonQuery();
 
-            MessageBox.Show("Usuario eliminado");
-            CargarUsuarios(); // 🔁 Refresca la grilla
+                    // Eliminar usuario
+                    string eliminarUsuario = "DELETE FROM dbo.usuario WHERE id_usuario = @IdUsuario";
+                    SqlCommand cmd2 = new SqlCommand(eliminarUsuario, con);
+                    cmd2.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd2.ExecuteNonQuery();
+
+                    MessageBox.Show("Usuario eliminado");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    CargarUsuarios();
+                    idUsuario = 0; // Reset
+                }
+            }
         }
     }
 }
