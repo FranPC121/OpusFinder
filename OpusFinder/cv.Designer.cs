@@ -312,7 +312,7 @@
             button2.Name = "button2";
             button2.Size = new Size(104, 23);
             button2.TabIndex = 35;
-            button2.Text = "Exportar PDF";
+            button2.Text = "Guardar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -431,6 +431,7 @@
             button1.TabIndex = 56;
             button1.Text = "Ver Usuarios ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button5
             // 
@@ -441,6 +442,7 @@
             button5.TabIndex = 55;
             button5.Text = "Borrar Usuarios";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // dataGridView1
             // 

@@ -11,13 +11,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+
 
 namespace OpusFinder
 {
     public partial class cv : Form
     {
+        int idUsuario = 0;
+        SqlConnection con = new SqlConnection("Data Source=FRAN;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
+
         public cv()
         {
             InitializeComponent();
@@ -37,9 +40,7 @@ namespace OpusFinder
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            us nuevoFormulario = new us();
-            nuevoFormulario.Show();     // Muestra el form para crear cv
-            this.Hide();
+           
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -52,9 +53,7 @@ namespace OpusFinder
 
         private void button4_Click(object sender, EventArgs e)
         {
-            us nuevoFormulario = new us();
-            nuevoFormulario.Show();     // Muestra el form para crear cv
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -165,6 +164,59 @@ namespace OpusFinder
                     txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
                 }
             }
+        }
+        private void CargarUsuarios()
+        {
+            string consulta = "SELECT * FROM dbo.usuario";
+            SqlDataAdapter da = new SqlDataAdapter(consulta, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string actualizarUsuario = "UPDATE dbo.usuario SET " +
+                               "Nombres = @Nombres, Apellidos = @Apellidos, Titulo_universitario = @Titulo, Email = @Email, " +
+                               "Código_Postal = @CP, Localidad = @Localidad, Género = @Genero, Estado_civil = @EstadoCivil, Telefono = @Telefono " +
+                               "WHERE id_usuario = @IdUsuario";
+
+            SqlCommand cmd = new SqlCommand(actualizarUsuario, con);
+            cmd.Parameters.AddWithValue("@Nombres", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@Apellidos", txtApellidos.Text);
+            cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+            cmd.Parameters.AddWithValue("@Email", txtCorreo.Text);
+            cmd.Parameters.AddWithValue("@CP", txtCP.Text);
+            cmd.Parameters.AddWithValue("@Localidad", txtLocalidad.Text);
+            cmd.Parameters.AddWithValue("@Genero", cmbGenero.Text);
+            cmd.Parameters.AddWithValue("@EstadoCivil", cmbEstadoCivil.Text);
+            cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+            cmd.Parameters.AddWithValue("@IdUsuario", idUsuario); // Este valor tiene que venir del DataGridView
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Usuario actualizado");
+            CargarUsuarios(); //  Actualiza el DataGridView
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string eliminarIdiomas = "DELETE FROM dbo.idiomas WHERE id_usuario = @IdUsuario";
+            SqlCommand cmd1 = new SqlCommand(eliminarIdiomas, con);
+            cmd1.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+            string eliminarUsuario = "DELETE FROM dbo.usuario WHERE id_usuario = @IdUsuario";
+            SqlCommand cmd2 = new SqlCommand(eliminarUsuario, con);
+            cmd2.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+            con.Open();
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Usuario eliminado");
+            CargarUsuarios(); // 🔁 Refresca la grilla
         }
     }
 }
