@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             empleogrid = new DataGridView();
-            título = new DataGridViewTextBoxColumn();
-            Empresa = new DataGridViewTextBoxColumn();
-            modalidad = new DataGridViewTextBoxColumn();
-            Región = new DataGridViewTextBoxColumn();
-            Descripción = new DataGridViewTextBoxColumn();
-            Requerimentos = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)empleogrid).BeginInit();
             SuspendLayout();
             // 
@@ -43,45 +37,11 @@
             empleogrid.AllowUserToAddRows = false;
             empleogrid.AllowUserToDeleteRows = false;
             empleogrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            empleogrid.Columns.AddRange(new DataGridViewColumn[] { título, Empresa, modalidad, Región, Descripción, Requerimentos });
             empleogrid.Location = new Point(12, 34);
             empleogrid.Name = "empleogrid";
-            empleogrid.Size = new Size(637, 43);
+            empleogrid.Size = new Size(637, 145);
             empleogrid.TabIndex = 0;
             empleogrid.CellContentClick += empleogrid_CellContentClick;
-            // 
-            // título
-            // 
-            título.HeaderText = "título";
-            título.Name = "título";
-            título.ReadOnly = true;
-            // 
-            // Empresa
-            // 
-            Empresa.HeaderText = "Empresa";
-            Empresa.Name = "Empresa";
-            Empresa.ReadOnly = true;
-            // 
-            // modalidad
-            // 
-            modalidad.HeaderText = "Modalidad";
-            modalidad.Name = "modalidad";
-            // 
-            // Región
-            // 
-            Región.HeaderText = "Región";
-            Región.Name = "Región";
-            Región.ReadOnly = true;
-            // 
-            // Descripción
-            // 
-            Descripción.HeaderText = "Descripción";
-            Descripción.Name = "Descripción";
-            // 
-            // Requerimentos
-            // 
-            Requerimentos.HeaderText = "Requerimentos";
-            Requerimentos.Name = "Requerimentos";
             // 
             // oferta
             // 
@@ -91,6 +51,7 @@
             Controls.Add(empleogrid);
             Name = "oferta";
             Text = "oferta";
+            Load += oferta_Load;
             ((System.ComponentModel.ISupportInitialize)empleogrid).EndInit();
             ResumeLayout(false);
         }
@@ -98,11 +59,5 @@
         #endregion
 
         private DataGridView empleogrid;
-        private DataGridViewTextBoxColumn título;
-        private DataGridViewTextBoxColumn Empresa;
-        private DataGridViewTextBoxColumn modalidad;
-        private DataGridViewTextBoxColumn Región;
-        private DataGridViewTextBoxColumn Descripción;
-        private DataGridViewTextBoxColumn Requerimentos;
     }
 }

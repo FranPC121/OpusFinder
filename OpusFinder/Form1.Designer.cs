@@ -35,51 +35,51 @@
             lblmodalidad = new Label();
             lblregion = new Label();
             modalidad = new ComboBox();
-            rubro = new ComboBox();
+            cmbrubro = new ComboBox();
             región = new ComboBox();
             panel1 = new Panel();
-            panel3 = new Panel();
+            panelEducacion = new Panel();
             pictureBox7 = new PictureBox();
             label9 = new Label();
             pictureBox9 = new PictureBox();
             label10 = new Label();
             pictureBox11 = new PictureBox();
-            button3 = new Button();
+            of4 = new Button();
             pictureBox13 = new PictureBox();
             label11 = new Label();
             label12 = new Label();
             label14 = new Label();
             label19 = new Label();
-            panel2 = new Panel();
+            panelIndustrial = new Panel();
             pictureBox6 = new PictureBox();
             label5 = new Label();
             pictureBox8 = new PictureBox();
             label6 = new Label();
             pictureBox12 = new PictureBox();
-            button2 = new Button();
+            of3 = new Button();
             pictureBox16 = new PictureBox();
             label7 = new Label();
             label8 = new Label();
             label18 = new Label();
             label24 = new Label();
-            panel4 = new Panel();
+            panelConstruccion = new Panel();
             label25 = new Label();
             pictureBox15 = new PictureBox();
             label13 = new Label();
             pictureBox17 = new PictureBox();
             pictureBox19 = new PictureBox();
-            button4 = new Button();
+            of5 = new Button();
             pictureBox23 = new PictureBox();
             label20 = new Label();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
-            empleo2 = new Panel();
+            panelInformatica = new Panel();
             pictureBox18 = new PictureBox();
             pictureBox14 = new PictureBox();
             pictureBox10 = new PictureBox();
             label17 = new Label();
-            button1 = new Button();
+            of2 = new Button();
             pictureBox5 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -87,13 +87,13 @@
             label4 = new Label();
             pictureBox4 = new PictureBox();
             descripcion = new Label();
-            empleo1 = new Panel();
+            panelComercio = new Panel();
             pictureBox20 = new PictureBox();
             label16 = new Label();
             pictureBox21 = new PictureBox();
             label15 = new Label();
             pictureBox22 = new PictureBox();
-            off1 = new Button();
+            of1 = new Button();
             pictureBox3 = new PictureBox();
             labelrubro = new Label();
             empleoubi = new Label();
@@ -104,28 +104,28 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            panelEducacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            panel2.SuspendLayout();
+            panelIndustrial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            panel4.SuspendLayout();
+            panelConstruccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
-            empleo2.SuspendLayout();
+            panelInformatica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            empleo1.SuspendLayout();
+            panelComercio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
@@ -217,17 +217,17 @@
             modalidad.Size = new Size(164, 25);
             modalidad.TabIndex = 21;
             // 
-            // rubro
+            // cmbrubro
             // 
-            rubro.Anchor = AnchorStyles.Top;
-            rubro.DropDownStyle = ComboBoxStyle.DropDownList;
-            rubro.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rubro.FormattingEnabled = true;
-            rubro.Items.AddRange(new object[] { "Comercio", "Industrial", "Informática", "Educación", "Construcción", "Cualquier rubro" });
-            rubro.Location = new Point(491, 196);
-            rubro.Name = "rubro";
-            rubro.Size = new Size(114, 25);
-            rubro.TabIndex = 20;
+            cmbrubro.Anchor = AnchorStyles.Top;
+            cmbrubro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbrubro.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbrubro.FormattingEnabled = true;
+            cmbrubro.Items.AddRange(new object[] { "Comercio", "Industrial", "Informática", "Educación", "Construcción", "Cualquier rubro" });
+            cmbrubro.Location = new Point(491, 196);
+            cmbrubro.Name = "cmbrubro";
+            cmbrubro.Size = new Size(114, 25);
+            cmbrubro.TabIndex = 20;
             // 
             // región
             // 
@@ -247,14 +247,14 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(empleo2);
+            panel1.Controls.Add(panelEducacion);
+            panel1.Controls.Add(panelIndustrial);
+            panel1.Controls.Add(panelConstruccion);
+            panel1.Controls.Add(panelInformatica);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(descripcion);
-            panel1.Controls.Add(empleo1);
-            panel1.Controls.Add(rubro);
+            panel1.Controls.Add(panelComercio);
+            panel1.Controls.Add(cmbrubro);
             panel1.Controls.Add(región);
             panel1.Controls.Add(lblrubro);
             panel1.Controls.Add(modalidad);
@@ -266,25 +266,25 @@
             panel1.TabIndex = 26;
             panel1.Paint += panel1_Paint;
             // 
-            // panel3
+            // panelEducacion
             // 
-            panel3.Anchor = AnchorStyles.Top;
-            panel3.Controls.Add(pictureBox7);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(pictureBox9);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(pictureBox11);
-            panel3.Controls.Add(button3);
-            panel3.Controls.Add(pictureBox13);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(label14);
-            panel3.Controls.Add(label19);
-            panel3.Font = new Font("Century Gothic", 9F);
-            panel3.Location = new Point(435, 439);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(408, 126);
-            panel3.TabIndex = 34;
+            panelEducacion.Anchor = AnchorStyles.Top;
+            panelEducacion.Controls.Add(pictureBox7);
+            panelEducacion.Controls.Add(label9);
+            panelEducacion.Controls.Add(pictureBox9);
+            panelEducacion.Controls.Add(label10);
+            panelEducacion.Controls.Add(pictureBox11);
+            panelEducacion.Controls.Add(of4);
+            panelEducacion.Controls.Add(pictureBox13);
+            panelEducacion.Controls.Add(label11);
+            panelEducacion.Controls.Add(label12);
+            panelEducacion.Controls.Add(label14);
+            panelEducacion.Controls.Add(label19);
+            panelEducacion.Font = new Font("Century Gothic", 9F);
+            panelEducacion.Location = new Point(435, 439);
+            panelEducacion.Name = "panelEducacion";
+            panelEducacion.Size = new Size(408, 126);
+            panelEducacion.TabIndex = 34;
             // 
             // pictureBox7
             // 
@@ -335,21 +335,23 @@
             pictureBox11.TabIndex = 30;
             pictureBox11.TabStop = false;
             // 
-            // button3
+            // of4
             // 
-            button3.BackColor = Color.AliceBlue;
-            button3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Navy;
-            button3.Location = new Point(295, 87);
-            button3.Name = "button3";
-            button3.Size = new Size(103, 30);
-            button3.TabIndex = 5;
-            button3.Text = "Ver oferta";
-            button3.UseVisualStyleBackColor = false;
+            of4.BackColor = Color.AliceBlue;
+            of4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            of4.ForeColor = Color.Navy;
+            of4.Location = new Point(295, 87);
+            of4.Name = "of4";
+            of4.Size = new Size(103, 30);
+            of4.TabIndex = 5;
+            of4.Tag = "4";
+            of4.Text = "Ver oferta";
+            of4.UseVisualStyleBackColor = false;
+            of4.Click += of4_Click;
             // 
             // pictureBox13
             // 
-            pictureBox13.Image = Properties.Resources.cl2;
+            pictureBox13.Image = Properties.Resources.edl;
             pictureBox13.Location = new Point(350, 3);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(48, 41);
@@ -397,25 +399,25 @@
             label19.TabIndex = 0;
             label19.Text = "Mentor ";
             // 
-            // panel2
+            // panelIndustrial
             // 
-            panel2.Anchor = AnchorStyles.Top;
-            panel2.Controls.Add(pictureBox6);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(pictureBox8);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(pictureBox12);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(pictureBox16);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label18);
-            panel2.Controls.Add(label24);
-            panel2.Font = new Font("Century Gothic", 9F);
-            panel2.Location = new Point(12, 439);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(408, 126);
-            panel2.TabIndex = 33;
+            panelIndustrial.Anchor = AnchorStyles.Top;
+            panelIndustrial.Controls.Add(pictureBox6);
+            panelIndustrial.Controls.Add(label5);
+            panelIndustrial.Controls.Add(pictureBox8);
+            panelIndustrial.Controls.Add(label6);
+            panelIndustrial.Controls.Add(pictureBox12);
+            panelIndustrial.Controls.Add(of3);
+            panelIndustrial.Controls.Add(pictureBox16);
+            panelIndustrial.Controls.Add(label7);
+            panelIndustrial.Controls.Add(label8);
+            panelIndustrial.Controls.Add(label18);
+            panelIndustrial.Controls.Add(label24);
+            panelIndustrial.Font = new Font("Century Gothic", 9F);
+            panelIndustrial.Location = new Point(12, 439);
+            panelIndustrial.Name = "panelIndustrial";
+            panelIndustrial.Size = new Size(408, 126);
+            panelIndustrial.TabIndex = 33;
             // 
             // pictureBox6
             // 
@@ -466,21 +468,23 @@
             pictureBox12.TabIndex = 30;
             pictureBox12.TabStop = false;
             // 
-            // button2
+            // of3
             // 
-            button2.BackColor = Color.AliceBlue;
-            button2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Navy;
-            button2.Location = new Point(295, 87);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 30);
-            button2.TabIndex = 5;
-            button2.Text = "Ver oferta";
-            button2.UseVisualStyleBackColor = false;
+            of3.BackColor = Color.AliceBlue;
+            of3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            of3.ForeColor = Color.Navy;
+            of3.Location = new Point(295, 87);
+            of3.Name = "of3";
+            of3.Size = new Size(103, 30);
+            of3.TabIndex = 5;
+            of3.Tag = "3";
+            of3.Text = "Ver oferta";
+            of3.UseVisualStyleBackColor = false;
+            of3.Click += of3_Click;
             // 
             // pictureBox16
             // 
-            pictureBox16.Image = Properties.Resources.cl2;
+            pictureBox16.Image = Properties.Resources.inl;
             pictureBox16.Location = new Point(350, 3);
             pictureBox16.Name = "pictureBox16";
             pictureBox16.Size = new Size(48, 41);
@@ -528,25 +532,25 @@
             label24.TabIndex = 0;
             label24.Text = "Mecánico Industrial ";
             // 
-            // panel4
+            // panelConstruccion
             // 
-            panel4.Anchor = AnchorStyles.Top;
-            panel4.Controls.Add(label25);
-            panel4.Controls.Add(pictureBox15);
-            panel4.Controls.Add(label13);
-            panel4.Controls.Add(pictureBox17);
-            panel4.Controls.Add(pictureBox19);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(pictureBox23);
-            panel4.Controls.Add(label20);
-            panel4.Controls.Add(label21);
-            panel4.Controls.Add(label22);
-            panel4.Controls.Add(label23);
-            panel4.Font = new Font("Century Gothic", 9F);
-            panel4.Location = new Point(186, 592);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(408, 160);
-            panel4.TabIndex = 36;
+            panelConstruccion.Anchor = AnchorStyles.Top;
+            panelConstruccion.Controls.Add(label25);
+            panelConstruccion.Controls.Add(pictureBox15);
+            panelConstruccion.Controls.Add(label13);
+            panelConstruccion.Controls.Add(pictureBox17);
+            panelConstruccion.Controls.Add(pictureBox19);
+            panelConstruccion.Controls.Add(of5);
+            panelConstruccion.Controls.Add(pictureBox23);
+            panelConstruccion.Controls.Add(label20);
+            panelConstruccion.Controls.Add(label21);
+            panelConstruccion.Controls.Add(label22);
+            panelConstruccion.Controls.Add(label23);
+            panelConstruccion.Font = new Font("Century Gothic", 9F);
+            panelConstruccion.Location = new Point(186, 592);
+            panelConstruccion.Name = "panelConstruccion";
+            panelConstruccion.Size = new Size(408, 160);
+            panelConstruccion.TabIndex = 36;
             // 
             // label25
             // 
@@ -598,21 +602,23 @@
             pictureBox19.TabIndex = 33;
             pictureBox19.TabStop = false;
             // 
-            // button4
+            // of5
             // 
-            button4.BackColor = Color.AliceBlue;
-            button4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Navy;
-            button4.Location = new Point(295, 121);
-            button4.Name = "button4";
-            button4.Size = new Size(103, 30);
-            button4.TabIndex = 5;
-            button4.Text = "Ver oferta";
-            button4.UseVisualStyleBackColor = false;
+            of5.BackColor = Color.AliceBlue;
+            of5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            of5.ForeColor = Color.Navy;
+            of5.Location = new Point(295, 121);
+            of5.Name = "of5";
+            of5.Size = new Size(103, 30);
+            of5.TabIndex = 5;
+            of5.Tag = "5";
+            of5.Text = "Ver oferta";
+            of5.UseVisualStyleBackColor = false;
+            of5.Click += of5_Click;
             // 
             // pictureBox23
             // 
-            pictureBox23.Image = Properties.Resources.cl2;
+            pictureBox23.Image = Properties.Resources.col;
             pictureBox23.Location = new Point(350, 3);
             pictureBox23.Name = "pictureBox23";
             pictureBox23.Size = new Size(48, 41);
@@ -624,7 +630,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Century Gothic", 6.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label20.Location = new Point(277, 21);
+            label20.Location = new Point(279, 21);
             label20.Name = "label20";
             label20.Size = new Size(68, 12);
             label20.TabIndex = 3;
@@ -660,24 +666,24 @@
             label23.TabIndex = 0;
             label23.Text = "Gerente de Proyecto ";
             // 
-            // empleo2
+            // panelInformatica
             // 
-            empleo2.Anchor = AnchorStyles.Top;
-            empleo2.Controls.Add(pictureBox18);
-            empleo2.Controls.Add(pictureBox14);
-            empleo2.Controls.Add(pictureBox10);
-            empleo2.Controls.Add(label17);
-            empleo2.Controls.Add(button1);
-            empleo2.Controls.Add(pictureBox5);
-            empleo2.Controls.Add(label1);
-            empleo2.Controls.Add(label2);
-            empleo2.Controls.Add(label3);
-            empleo2.Controls.Add(label4);
-            empleo2.Font = new Font("Century Gothic", 9F);
-            empleo2.Location = new Point(435, 295);
-            empleo2.Name = "empleo2";
-            empleo2.Size = new Size(408, 126);
-            empleo2.TabIndex = 27;
+            panelInformatica.Anchor = AnchorStyles.Top;
+            panelInformatica.Controls.Add(pictureBox18);
+            panelInformatica.Controls.Add(pictureBox14);
+            panelInformatica.Controls.Add(pictureBox10);
+            panelInformatica.Controls.Add(label17);
+            panelInformatica.Controls.Add(of2);
+            panelInformatica.Controls.Add(pictureBox5);
+            panelInformatica.Controls.Add(label1);
+            panelInformatica.Controls.Add(label2);
+            panelInformatica.Controls.Add(label3);
+            panelInformatica.Controls.Add(label4);
+            panelInformatica.Font = new Font("Century Gothic", 9F);
+            panelInformatica.Location = new Point(435, 295);
+            panelInformatica.Name = "panelInformatica";
+            panelInformatica.Size = new Size(408, 126);
+            panelInformatica.TabIndex = 27;
             // 
             // pictureBox18
             // 
@@ -719,17 +725,19 @@
             label17.TabIndex = 8;
             label17.Text = "Tiempo completo";
             // 
-            // button1
+            // of2
             // 
-            button1.BackColor = Color.AliceBlue;
-            button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Navy;
-            button1.Location = new Point(297, 88);
-            button1.Name = "button1";
-            button1.Size = new Size(103, 29);
-            button1.TabIndex = 5;
-            button1.Text = "Ver oferta";
-            button1.UseVisualStyleBackColor = false;
+            of2.BackColor = Color.AliceBlue;
+            of2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            of2.ForeColor = Color.Navy;
+            of2.Location = new Point(297, 88);
+            of2.Name = "of2";
+            of2.Size = new Size(103, 29);
+            of2.TabIndex = 5;
+            of2.Tag = "2";
+            of2.Text = "Ver oferta";
+            of2.UseVisualStyleBackColor = false;
+            of2.Click += button1_Click;
             // 
             // pictureBox5
             // 
@@ -794,6 +802,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 28;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // descripcion
             // 
@@ -807,25 +816,25 @@
             descripcion.TabIndex = 27;
             descripcion.Text = "Encuentra tu empleo tu ideal con la empresa que deseas!";
             // 
-            // empleo1
+            // panelComercio
             // 
-            empleo1.Anchor = AnchorStyles.Top;
-            empleo1.Controls.Add(pictureBox20);
-            empleo1.Controls.Add(label16);
-            empleo1.Controls.Add(pictureBox21);
-            empleo1.Controls.Add(label15);
-            empleo1.Controls.Add(pictureBox22);
-            empleo1.Controls.Add(off1);
-            empleo1.Controls.Add(pictureBox3);
-            empleo1.Controls.Add(labelrubro);
-            empleo1.Controls.Add(empleoubi);
-            empleo1.Controls.Add(empleodsc);
-            empleo1.Controls.Add(empleotlt);
-            empleo1.Font = new Font("Century Gothic", 9F);
-            empleo1.Location = new Point(12, 295);
-            empleo1.Name = "empleo1";
-            empleo1.Size = new Size(408, 126);
-            empleo1.TabIndex = 26;
+            panelComercio.Anchor = AnchorStyles.Top;
+            panelComercio.Controls.Add(pictureBox20);
+            panelComercio.Controls.Add(label16);
+            panelComercio.Controls.Add(pictureBox21);
+            panelComercio.Controls.Add(label15);
+            panelComercio.Controls.Add(pictureBox22);
+            panelComercio.Controls.Add(of1);
+            panelComercio.Controls.Add(pictureBox3);
+            panelComercio.Controls.Add(labelrubro);
+            panelComercio.Controls.Add(empleoubi);
+            panelComercio.Controls.Add(empleodsc);
+            panelComercio.Controls.Add(empleotlt);
+            panelComercio.Font = new Font("Century Gothic", 9F);
+            panelComercio.Location = new Point(12, 295);
+            panelComercio.Name = "panelComercio";
+            panelComercio.Size = new Size(408, 126);
+            panelComercio.TabIndex = 26;
             // 
             // pictureBox20
             // 
@@ -876,17 +885,19 @@
             pictureBox22.TabIndex = 30;
             pictureBox22.TabStop = false;
             // 
-            // off1
+            // of1
             // 
-            off1.BackColor = Color.AliceBlue;
-            off1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            off1.ForeColor = Color.Navy;
-            off1.Location = new Point(295, 87);
-            off1.Name = "off1";
-            off1.Size = new Size(103, 30);
-            off1.TabIndex = 5;
-            off1.Text = "Ver oferta";
-            off1.UseVisualStyleBackColor = false;
+            of1.BackColor = Color.AliceBlue;
+            of1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            of1.ForeColor = Color.Navy;
+            of1.Location = new Point(295, 87);
+            of1.Name = "of1";
+            of1.Size = new Size(103, 30);
+            of1.TabIndex = 5;
+            of1.Tag = "1";
+            of1.Text = "Ver oferta";
+            of1.UseVisualStyleBackColor = false;
+            of1.Click += of1_Click;
             // 
             // pictureBox3
             // 
@@ -943,45 +954,46 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(844, 1020);
+            ClientSize = new Size(844, 1005);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(logo);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            panelEducacion.ResumeLayout(false);
+            panelEducacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelIndustrial.ResumeLayout(false);
+            panelIndustrial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panelConstruccion.ResumeLayout(false);
+            panelConstruccion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
-            empleo2.ResumeLayout(false);
-            empleo2.PerformLayout();
+            panelInformatica.ResumeLayout(false);
+            panelInformatica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            empleo1.ResumeLayout(false);
-            empleo1.PerformLayout();
+            panelComercio.ResumeLayout(false);
+            panelComercio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
@@ -997,10 +1009,10 @@
         private Label lblmodalidad;
         private Label lblregion;
         private ComboBox modalidad;
-        private ComboBox rubro;
+        private ComboBox cmbrubro;
         private ComboBox región;
         private Panel panel1;
-        private Panel empleo1;
+        private Panel panelComercio;
         private Label empleotlt;
         private Label empleodsc;
         private Label empleoubi;
@@ -1008,14 +1020,14 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private PictureBox pictureBox4;
         private Label labelrubro;
-        private Panel empleo2;
-        private Button button1;
+        private Panel panelInformatica;
+        private Button of2;
         private PictureBox pictureBox5;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button off1;
+        private Button of1;
         private PictureBox pictureBox3;
         private Label label16;
         private Label label15;
@@ -1026,36 +1038,36 @@
         private PictureBox pictureBox20;
         private PictureBox pictureBox21;
         private PictureBox pictureBox22;
-        private Panel panel4;
+        private Panel panelConstruccion;
         private PictureBox pictureBox15;
         private Label label13;
         private PictureBox pictureBox17;
         private PictureBox pictureBox19;
-        private Button button4;
+        private Button of5;
         private PictureBox pictureBox23;
         private Label label20;
         private Label label21;
         private Label label22;
         private Label label23;
-        private Panel panel3;
+        private Panel panelEducacion;
         private PictureBox pictureBox7;
         private Label label9;
         private PictureBox pictureBox9;
         private Label label10;
         private PictureBox pictureBox11;
-        private Button button3;
+        private Button of4;
         private PictureBox pictureBox13;
         private Label label11;
         private Label label12;
         private Label label14;
         private Label label19;
-        private Panel panel2;
+        private Panel panelIndustrial;
         private PictureBox pictureBox6;
         private Label label5;
         private PictureBox pictureBox8;
         private Label label6;
         private PictureBox pictureBox12;
-        private Button button2;
+        private Button of3;
         private PictureBox pictureBox16;
         private Label label7;
         private Label label8;

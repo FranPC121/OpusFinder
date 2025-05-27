@@ -113,6 +113,16 @@ namespace OpusFinder.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap col {
+            get {
+                object obj = ResourceManager.GetObject("col", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comprobado {
             get {
                 object obj = ResourceManager.GetObject("comprobado", resourceCulture);
@@ -126,6 +136,16 @@ namespace OpusFinder.Properties {
         internal static System.Drawing.Bitmap cv {
             get {
                 object obj = ResourceManager.GetObject("cv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edl {
+            get {
+                object obj = ResourceManager.GetObject("edl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace OpusFinder.Properties {
         internal static System.Drawing.Bitmap il {
             get {
                 object obj = ResourceManager.GetObject("il", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inl {
+            get {
+                object obj = ResourceManager.GetObject("inl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
