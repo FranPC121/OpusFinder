@@ -152,7 +152,7 @@ namespace OpusFinder
                 {
                     DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
 
-                    idUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value); // asegurate de que la columna se llame así
+                    idUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value); 
                     txtNombre.Text = fila.Cells["Nombres"].Value.ToString();
                     txtApellidos.Text = fila.Cells["Apellidos"].Value.ToString();
                     txtTitulo.Text = fila.Cells["Titulo_universitario"].Value.ToString();
