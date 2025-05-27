@@ -424,7 +424,7 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.Left;
             button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(214, 493);
             button1.Name = "button1";
@@ -436,7 +436,7 @@
             // 
             // button5
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button5.Anchor = AnchorStyles.Left;
             button5.ForeColor = SystemColors.ActiveCaptionText;
             button5.Location = new Point(118, 493);
             button5.Name = "button5";
@@ -448,7 +448,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.Left;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(30, 302);

@@ -40,7 +40,7 @@ namespace OpusFinder
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -53,12 +53,12 @@ namespace OpusFinder
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=FRAN;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-HTNGQBS;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
             con.Open();
 
             // Datos del usuario
@@ -71,10 +71,11 @@ namespace OpusFinder
             string Genero = cmbGenero.Text;
             string Estado_civil = cmbEstadoCivil.Text;
             string Telefono = txtTelefono.Text;
+            string direccion = txtDireccion.Text;
 
             // Insertar usuario
-            string cadenaUsuario = "INSERT INTO dbo.usuario (Nombres, Apellidos, Titulo_universitario, Email, Código_Postal, Localidad, Género, Estado_civil, Telefono) " +
-                                   "VALUES (@Nombres, @Apellidos, @Titulo_universitario, @Email, @Codigo_Postal, @Localidad, @Genero, @Estado_civil, @Telefono); " +
+            string cadenaUsuario = "INSERT INTO dbo.usuario (Nombres, Apellidos, Titulo_universitario, Email, Código_Postal, Localidad, Género, Estado_civil, Telefono,direccion) " +
+                                   "VALUES (@Nombres, @Apellidos, @Titulo_universitario, @Email, @Codigo_Postal, @Localidad, @Genero, @Estado_civil, @Telefono,@direccion); " +
                                    "SELECT SCOPE_IDENTITY();";
 
             SqlCommand comandoUsuario = new SqlCommand(cadenaUsuario, con);
@@ -87,6 +88,7 @@ namespace OpusFinder
             comandoUsuario.Parameters.AddWithValue("@Genero", Genero);
             comandoUsuario.Parameters.AddWithValue("@Estado_civil", Estado_civil);
             comandoUsuario.Parameters.AddWithValue("@Telefono", Telefono);
+            comandoUsuario.Parameters.AddWithValue("@direccion", direccion);
 
             int idUsuario = Convert.ToInt32(comandoUsuario.ExecuteScalar());
 
@@ -108,6 +110,7 @@ namespace OpusFinder
             cmbGenero.Text = "";
             cmbEstadoCivil.Text = "";
             txtTelefono.Text = "";
+            txtDireccion.Text = "";
 
             txtIdioma1.Text = "";
             txtIdioma2.Text = "";
@@ -142,7 +145,7 @@ namespace OpusFinder
 
         private void cv_Load(object sender, EventArgs e)
         {
-
+            CargarUsuarios();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -152,7 +155,7 @@ namespace OpusFinder
                 {
                     DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
 
-                    idUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value); 
+                    idUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value);
                     txtNombre.Text = fila.Cells["Nombres"].Value.ToString();
                     txtApellidos.Text = fila.Cells["Apellidos"].Value.ToString();
                     txtTitulo.Text = fila.Cells["Titulo_universitario"].Value.ToString();
@@ -162,22 +165,32 @@ namespace OpusFinder
                     cmbGenero.Text = fila.Cells["Género"].Value.ToString();
                     cmbEstadoCivil.Text = fila.Cells["Estado_civil"].Value.ToString();
                     txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
+                    txtDireccion.Text = fila.Cells["direccion"].Value.ToString();
                 }
             }
         }
         private void CargarUsuarios()
         {
-            string consulta = "SELECT * FROM dbo.usuario";
+            con.Open();
+
+            string consulta = "SELECT u.id_usuario, u.Nombres, u.Apellidos, u.Titulo_universitario, u.Email, " +
+                              "u.Código_Postal, u.Localidad, u.Género, u.Estado_civil, u.Telefono,u.direccion ," +
+                              "i.idioma, i.nivel " +
+                              "FROM dbo.usuario u " +
+                              "LEFT JOIN dbo.idiomas i ON u.id_usuario = i.id_usuario";
+
             SqlDataAdapter da = new SqlDataAdapter(consulta, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
+            con.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             string actualizarUsuario = "UPDATE dbo.usuario SET " +
                                "Nombres = @Nombres, Apellidos = @Apellidos, Titulo_universitario = @Titulo, Email = @Email, " +
-                               "Código_Postal = @CP, Localidad = @Localidad, Género = @Genero, Estado_civil = @EstadoCivil, Telefono = @Telefono " +
+                               "Código_Postal = @CP, Localidad = @Localidad, Género = @Genero, Estado_civil = @EstadoCivil, Telefono = @Telefono,@direccion=direccion " +
                                "WHERE id_usuario = @IdUsuario";
 
             SqlCommand cmd = new SqlCommand(actualizarUsuario, con);
@@ -190,6 +203,7 @@ namespace OpusFinder
             cmd.Parameters.AddWithValue("@Genero", cmbGenero.Text);
             cmd.Parameters.AddWithValue("@EstadoCivil", cmbEstadoCivil.Text);
             cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+            cmd.Parameters.AddWithValue("@direccion", txtDireccion.Text); 
             cmd.Parameters.AddWithValue("@IdUsuario", idUsuario); // Este valor tiene que venir del DataGridView
 
             con.Open();
@@ -238,6 +252,11 @@ namespace OpusFinder
                     idUsuario = 0; // Reset
                 }
             }
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
