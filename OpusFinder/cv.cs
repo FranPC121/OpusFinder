@@ -140,5 +140,31 @@ namespace OpusFinder
         {
 
         }
+
+        private void cv_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+
+                    idUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value); // asegurate de que la columna se llame así
+                    txtNombre.Text = fila.Cells["Nombres"].Value.ToString();
+                    txtApellidos.Text = fila.Cells["Apellidos"].Value.ToString();
+                    txtTitulo.Text = fila.Cells["Titulo_universitario"].Value.ToString();
+                    txtCorreo.Text = fila.Cells["Email"].Value.ToString();
+                    txtCP.Text = fila.Cells["Código_Postal"].Value.ToString();
+                    txtLocalidad.Text = fila.Cells["Localidad"].Value.ToString();
+                    cmbGenero.Text = fila.Cells["Género"].Value.ToString();
+                    cmbEstadoCivil.Text = fila.Cells["Estado_civil"].Value.ToString();
+                    txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
+                }
+            }
+        }
     }
 }
