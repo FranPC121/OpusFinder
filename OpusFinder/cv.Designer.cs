@@ -426,9 +426,9 @@
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(274, 493);
+            button1.Location = new Point(214, 493);
             button1.Name = "button1";
-            button1.Size = new Size(0, 23);
+            button1.Size = new Size(85, 23);
             button1.TabIndex = 56;
             button1.Text = "Ver Usuarios ";
             button1.UseVisualStyleBackColor = true;
@@ -438,9 +438,9 @@
             // 
             button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button5.ForeColor = SystemColors.ActiveCaptionText;
-            button5.Location = new Point(164, 493);
+            button5.Location = new Point(118, 493);
             button5.Name = "button5";
-            button5.Size = new Size(0, 23);
+            button5.Size = new Size(90, 23);
             button5.TabIndex = 55;
             button5.Text = "Borrar Usuarios";
             button5.UseVisualStyleBackColor = true;
