@@ -10,16 +10,7 @@ namespace OpusFinder
             InitializeComponent();
         }
 
-        private void cv1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logo_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             cv nuevoFormulario = new cv();
@@ -27,20 +18,6 @@ namespace OpusFinder
             this.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modalidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -49,88 +26,6 @@ namespace OpusFinder
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         }
 
-        private void lblrubro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblmodalidad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblregion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void empleo1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-
-        {
-
-        }
-
-
-
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void empleoubi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void off1_Click(object sender, EventArgs e)
         {
@@ -139,6 +34,6 @@ namespace OpusFinder
             this.Hide();
             
         }
+
     }
 }
-
