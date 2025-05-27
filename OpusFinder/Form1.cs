@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+
 namespace OpusFinder
 {
     public partial class Form1 : Form
@@ -24,6 +25,15 @@ namespace OpusFinder
             panel1.Size = new Size(this.ClientSize.Width, this.ClientSize.Height - 150);
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         }
-        
+
+
+        private void off1_Click(object sender, EventArgs e)
+        {
+            oferta nuevoFormulario = new oferta();
+            nuevoFormulario.Show();     // Muestra el form para crear cv
+            this.Hide();
+            
+        }
+
     }
 }
