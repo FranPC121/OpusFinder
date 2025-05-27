@@ -19,7 +19,7 @@ namespace OpusFinder
     public partial class cv : Form
     {
         int idUsuario = 0;
-        SqlConnection con = new SqlConnection("Data Source=FRAN;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HTNGQBS;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
 
         public cv()
         {

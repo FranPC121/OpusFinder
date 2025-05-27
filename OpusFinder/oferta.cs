@@ -37,7 +37,7 @@ namespace OpusFinder
         }
         private void CargarDatosEmpleo()
         {
-            SqlConnection con = new SqlConnection("Data Source=FRAN; Initial Catalog=CV; User ID=sa; Password=Nosenada01; Encrypt=False");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-HTNGQBS; Initial Catalog=CV; User ID=sa; Password=Nosenada01; Encrypt=False");
 
             try
             {
