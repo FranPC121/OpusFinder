@@ -14,11 +14,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>empleos.xsd</DependentUpon>
     </Compile>
-    <Compile Update="infojob.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>infojob.xsd</DependentUpon>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -38,10 +33,6 @@
     <None Update="empleos.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>empleos.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="infojob.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>infojob.Designer.cs</LastGenOutput>
     </None>
 
     <Folder Include="Imagenes\" />
