@@ -53,7 +53,7 @@ namespace OpusFinder
 
                 empleogrid.DataSource = dt;
             }
-            catch (Exception ex)
+            catch (Exception ex)//
             {
                 MessageBox.Show("Error al cargar empleo: " + ex.Message);
             }
