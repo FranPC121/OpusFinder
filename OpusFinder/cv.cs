@@ -14,10 +14,6 @@ using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-
-
-
-
 namespace OpusFinder
 {
     public partial class cv : Form
@@ -63,9 +59,10 @@ namespace OpusFinder
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = FRAN; Initial Catalog = CV; User ID = sa; Password = Nosenada01; Encrypt = False");
+            SqlConnection con = new SqlConnection("Data Source=FRAN;Initial Catalog=CV;User ID=sa;Password=Nosenada01;Encrypt=False");
             con.Open();
 
+            // Datos del usuario
             string Nombres = txtNombre.Text;
             string Apellidos = txtApellidos.Text;
             string Titulo_universitario = txtTitulo.Text;
@@ -74,28 +71,35 @@ namespace OpusFinder
             string Localidad = txtLocalidad.Text;
             string Genero = cmbGenero.Text;
             string Estado_civil = cmbEstadoCivil.Text;
-            string Telefono = txtTelefono.Text;         // Asegúrate de tener este TextBox
-            string Direccion = txtDireccion.Text;       // Asegúrate de tener este TextBox
+            string Telefono = txtTelefono.Text;
 
-            string cadena = "INSERT INTO dbo.usuario (Nombres, Apellidos, Titulo_universitario, Email, Código_Postal, Localidad, Género, Estado_civil, Telefono, Direccion) " +
-                            "VALUES (@Nombres, @Apellidos, @Titulo_universitario, @Email, @Codigo_Postal, @Localidad, @Genero, @Estado_civil, @Telefono, @Direccion)";
+            // Insertar usuario
+            string cadenaUsuario = "INSERT INTO dbo.usuario (Nombres, Apellidos, Titulo_universitario, Email, Código_Postal, Localidad, Género, Estado_civil, Telefono) " +
+                                   "VALUES (@Nombres, @Apellidos, @Titulo_universitario, @Email, @Codigo_Postal, @Localidad, @Genero, @Estado_civil, @Telefono); " +
+                                   "SELECT SCOPE_IDENTITY();";
 
-            SqlCommand comando = new SqlCommand(cadena, con);
-            comando.Parameters.AddWithValue("@Nombres", Nombres);
-            comando.Parameters.AddWithValue("@Apellidos", Apellidos);
-            comando.Parameters.AddWithValue("@Titulo_universitario", Titulo_universitario);
-            comando.Parameters.AddWithValue("@Email", Email);
-            comando.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
-            comando.Parameters.AddWithValue("@Localidad", Localidad);
-            comando.Parameters.AddWithValue("@Genero", Genero);
-            comando.Parameters.AddWithValue("@Estado_civil", Estado_civil);
-            comando.Parameters.AddWithValue("@Telefono", Telefono);
-            comando.Parameters.AddWithValue("@Direccion", Direccion);
+            SqlCommand comandoUsuario = new SqlCommand(cadenaUsuario, con);
+            comandoUsuario.Parameters.AddWithValue("@Nombres", Nombres);
+            comandoUsuario.Parameters.AddWithValue("@Apellidos", Apellidos);
+            comandoUsuario.Parameters.AddWithValue("@Titulo_universitario", Titulo_universitario);
+            comandoUsuario.Parameters.AddWithValue("@Email", Email);
+            comandoUsuario.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
+            comandoUsuario.Parameters.AddWithValue("@Localidad", Localidad);
+            comandoUsuario.Parameters.AddWithValue("@Genero", Genero);
+            comandoUsuario.Parameters.AddWithValue("@Estado_civil", Estado_civil);
+            comandoUsuario.Parameters.AddWithValue("@Telefono", Telefono);
 
-            comando.ExecuteNonQuery();
+            int idUsuario = Convert.ToInt32(comandoUsuario.ExecuteScalar());
+
+            // Insertar idiomas
+            InsertarIdioma(txtIdioma1.Text, cmbNivel1.Text, idUsuario, con);
+            InsertarIdioma(txtIdioma2.Text, cmbNivel2.Text, idUsuario, con);
+            InsertarIdioma(txtIdioma3.Text, cmbNivel3.Text, idUsuario, con);
+            InsertarIdioma(txtIdioma4.Text, cmbNivel4.Text, idUsuario, con);
+
             MessageBox.Show("Datos guardados correctamente");
 
-            // Limpiar campos
+            // Limpiar campos del formulario
             txtNombre.Text = "";
             txtApellidos.Text = "";
             txtTitulo.Text = "";
@@ -105,17 +109,36 @@ namespace OpusFinder
             cmbGenero.Text = "";
             cmbEstadoCivil.Text = "";
             txtTelefono.Text = "";
-            txtDireccion.Text = "";
+
+            txtIdioma1.Text = "";
+            txtIdioma2.Text = "";
+            txtIdioma3.Text = "";
+            txtIdioma4.Text = "";
+
+            cmbNivel1.Text = "";
+            cmbNivel2.Text = "";
+            cmbNivel3.Text = "";
+            cmbNivel4.Text = "";
 
             con.Close();
         }
 
-
-
+        // Método para insertar idioma solo si hay datos
+        private void InsertarIdioma(string idioma, string nivel, int idUsuario, SqlConnection con)
+        {
+            if (!string.IsNullOrWhiteSpace(idioma) && !string.IsNullOrWhiteSpace(nivel))
+            {
+                string insertIdioma = "INSERT INTO dbo.idiomas (idioma, nivel, id_usuario) VALUES (@idioma, @nivel, @id_usuario)";
+                SqlCommand cmd = new SqlCommand(insertIdioma, con);
+                cmd.Parameters.AddWithValue("@idioma", idioma);
+                cmd.Parameters.AddWithValue("@nivel", nivel);
+                cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                cmd.ExecuteNonQuery();
+            }
+        }
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
-
 }
